@@ -1,0 +1,57 @@
+title: Shortlog
+description: Uncategorized log of my personal notes.
+author: Sankalp Bose
+github: https://github.com/sankalpb
+about: Versatile programmer with experience spanning Linux kernel, Java WebServices, Embedded Systems and Performance Engg.
+disqus_shortname: sankalp-bose
+google_analytics: UA-135993222-1
+avatar_url: /static/img/avatar.jpg
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "#"
+    - icon: fa-twitter
+      link: "#"
+    - icon: fa-linkedin
+      link: "#"
+    - icon: fa-stack-exchange
+      link: "#"
+    - icon: fa-github
+      link: "https://github.com/sankalpb"
+
+share:
+  twitter_username: github.io
+  fb_appid: 
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: Resume
+      url: /resume/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://sankalpb.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
