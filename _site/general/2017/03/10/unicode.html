@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Unicode condensed - Shortlog</title>
+    <meta name="author" content="Sankalp Bose" />
+    <meta name="description" content="Unicode condensed" />
+    <meta name="keywords" content="Unicode condensed, Shortlog, general" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="" property="fb:app_id">
+    <meta content="Shortlog" property="og:site_name">
+
+    
+
+    
+      <meta content="Unicode condensed" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Uncategorized log of my personal notes." property="og:description">
+    
+
+    
+      <meta content="http://localhost:4001/general/2017/03/10/unicode.html" property="og:url">
+    
+
+    
+      <meta content="2017-03-10T00:00:00+05:30" property="article:published_time">
+      <meta content="http://localhost:4001/about/" property="article:author">
+    
+
+    
+      <meta content="http://localhost:4001/static/img/avatar.jpg" property="og:image">
+    
+
+    
+      
+        <meta content="general" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@github.io">
+    <meta name="twitter:creator" content="@github.io">
+
+    
+      <meta name="twitter:title" content="Unicode condensed">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4001/general/2017/03/10/unicode.html">
+    
+
+    
+      <meta name="twitter:description" content="Uncategorized log of my personal notes.">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
+          <h1 class="author-name">Sankalp Bose</h1>
+          
+            <div class="profile-about">
+              Versatile programmer with experience spanning Linux kernel, Java WebServices, Embedded Systems and Performance Engg.
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/sankalp-bose-8019835/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="https://stackoverflow.com/users/2783799/sankalp-bose" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/sankalpb" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="search" id="js-search">
+            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          <hr />
+          <ul class="sidebar-nav">
+            <strong>Navigation</strong>
+            <li><a href="/">Home</a></li>
+            
+              <li><a class="about" href="/about/">About Me</a></li>
+            
+              <li><a class="about" href="/resume/">Resume</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+        </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Unicode condensed</h1>
+</header>
+
+<span class="time">10 Mar 2017</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/general">general</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Unicode</a>
+<ul>
+<li><a href="#sec-1-1">1.1. UTF-32</a></li>
+<li><a href="#sec-1-2">1.2. UTF-8</a></li>
+<li><a href="#sec-1-3">1.3. UTF-16</a></li>
+<li><a href="#sec-1-4">1.4. Dynamic composition</a></li>
+<li><a href="#sec-1-5">1.5. Futher reading</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<h1 id="unicode">Unicode<a id="sec-1" name="sec-1"></a></h1>
+
+<ul>
+  <li>A Unicode character is a sequence of one or more code points. Code point is an index into a space of cardinality 1,114,112.</li>
+  <li>Code points can be represented as U+0000 to U+10FFFF.</li>
+  <li>128,237 code points are actually assigned to scripts. Additional 137,468 code points are reserved for future use.</li>
+</ul>
+
+<h2 id="utf-32">UTF-32<a id="sec-1-1" name="sec-1-1"></a></h2>
+
+<ul>
+  <li>32 bit index into unicode space.</li>
+</ul>
+
+<h2 id="utf-8">UTF-8<a id="sec-1-2" name="sec-1-2"></a></h2>
+
+<ul>
+  <li>Encoding of code space such that code points are between 1 to 4 octets long. Code point can be decoded using the table below.</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left" />
+
+<col class="left" />
+
+<col class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">UTF-8 (binary)</th>
+<th scope="col" class="left">Code point (binary)</th>
+<th scope="col" class="left">Range</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="left">0xxxxxxx</td>
+<td class="left">xxxxxxx</td>
+<td class="left">U+0000–U+007F</td>
+</tr>
+
+
+<tr>
+<td class="left">110xxxxx 10yyyyyy</td>
+<td class="left">xxxxxyyyyyy</td>
+<td class="left">U+0080–U+07FF</td>
+</tr>
+
+
+<tr>
+<td class="left">1110xxxx 10yyyyyy   10zzzzzz</td>
+<td class="left">xxxxyyyyyyzzzzzz</td>
+<td class="left">U+0800–U+FFFF</td>
+</tr>
+
+
+<tr>
+<td class="left">11110xxx 10yyyyyy 10zzzzzz 10wwwwww</td>
+<td class="left">xxxyyyyyyzzzzzzwwwwww</td>
+<td class="left">U+10000–U+10FFFF</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+  <li>Code points below 128 (ASCII characters) are encoded as single bytes.</li>
+</ul>
+
+<h2 id="utf-16">UTF-16<a id="sec-1-3" name="sec-1-3"></a></h2>
+
+<ul>
+  <li>Encoding of code space such that code points are between 1 to 2 Words long and are decoded as per the table below.</li>
+</ul>
+
+<table border="20" cellspacing="20" cellpadding="20" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left" />
+
+<col class="left" />
+
+<col class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">UTF-16 (binary)</th>
+<th scope="col" class="left">Code point (binary)</th>
+<th scope="col" class="left">Range</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="left">xxxxxxxxxxxxxxxx</td>
+<td class="left">xxxxxxxxxxxxxxxx</td>
+<td class="left">U+0000–U+FFFF</td>
+</tr>
+
+
+<tr>
+<td class="left">110110xxxxxxxxxx 110111yyyyyyyyyy</td>
+<td class="left">xxxxxxxxxxyyyyyyyyyy + 0x10000</td>
+<td class="left">U+10000–U+10FFFF</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+  <li>UTF-16’s words can be stored either little-endian or big-endian. There is convention of putting U+FEFF zero width no-break space at the top of a UTF-16 file as a byte-order mark, to disambiguate the endianness.</li>
+</ul>
+
+<h2 id="dynamic-composition">Dynamic composition<a id="sec-1-4" name="sec-1-4"></a></h2>
+
+<ul>
+  <li>“Á” can be expressed as a string of two code points: U+0041 “A” latin capital letter a plus U+0301 “◌́” combining acute accent.</li>
+  <li>In this example, A is base code point, Accent ◌́ is combining mark</li>
+  <li>Canonical equivalence: There may be two or more ways to dynamically compose same user perceived characters. eg. for “ệ” - U+1EB9 “ẹ” + U+0302 “◌̂” and U+00EA “ê” + U+0323 “◌̣”</li>
+  <li>several normalization forms exist to convert strings into a canonical form so that they can be compared code-point-by-code-point. eg. NFD form, NFC form and NFKD and NFKC forms.</li>
+</ul>
+
+<h2 id="futher-reading">Futher reading<a id="sec-1-5" name="sec-1-5"></a></h2>
+
+<p><a href="http://reedbeta.com/blog/programmers-intro-to-unicode/">http://reedbeta.com/blog/programmers-intro-to-unicode/</a></p>
+</div>
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="github.io">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4001/general/2017/03/10/unicode.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+  
+
+<div class="PageNavigation">
+  
+  
+    <a class="next" href="/linux/2018/11/03/Linux-OOM-Killer.html">Linux OOM Killer Policy and Knobs &raquo;</a>
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "sankalp-bose";
+    var disqus_identifier = "http://localhost:4001_Unicode condensed";
+    var disqus_title = "Unicode condensed";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer>
+          &copy; Sankalp Bose
+          
+            - <a href="https://github.com/sankalpb">https://github.com/sankalpb</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,219 @@
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{epsfig}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\oddsidemargin -0.40in 
+\evensidemargin -0.40in 
+\pagestyle{empty}
+\topskip 0.0in
+\headheight 0pt 
+\pagestyle{empty}
+\textheight 9.0in
+\textwidth 7.2in
+\hoffset -0pt
+\voffset -5.0pt
+\author{sankalp bose}
+\title{Resume}
+\date{2011-12-02}
+
+
+
+% Name and contact information
+\newcommand{\name}{Sankalp Bose}
+\newcommand{\addr}{Pune, 411027}
+\newcommand{\phone}{+91 9960482790}
+\newcommand{\email}{bose.sankalp@gmail.com}
+\newcommand{\bitbucket}{bitbucket.org/sankalpb}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+\newenvironment{msection}[1]{
+	\vspace{2pt}
+	{\large{\bf \underbar{#1}}}\vskip 1pt
+	\vspace{-5pt}
+	\begin{itemize}
+	\vspace{-5pt}
+}{
+	\end{itemize}
+}
+
+\newenvironment{ssection}[2]{
+	\hitem{#1}{#2}
+	\vspace{-2pt}
+	\begin{itemize}
+	\vspace{-2pt}
+}{
+	\end{itemize}
+}
+
+\newenvironment{sssection}[1]{
+	\vspace{2pt}
+	\hitem{#1}{}
+	\small
+	\begin{itemize}	
+	\vspace{-2pt}
+}{
+	\end{itemize}
+}
+
+
+\newcommand{\hitem}[2]{
+	\vspace{-4pt}
+	\item{\textbf{\em #1} \hfill #2}
+}
+
+\newcommand{\iitem}[2]{
+	\vspace{-4pt}
+	\item[$\bullet$]{{\bf \em #1:} #2}
+}
+
+\newcommand{\nitem}[1]{
+	#1\\
+}
+
+\newcommand{\itemz}[1]{
+	\vspace{-2pt}
+	\item[$\bullet$]{#1}
+}
+
+\newcommand{\itemzz}[1]{
+	\vspace{-4pt}
+	\item{#1}
+}
+
+
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+\vspace{-14pt} \rule{\textwidth}{1pt}
+\vspace{-6pt} {\small\itshape Mobile: \phone \hfill Email: \email}
+\vspace{-6pt} {\small\itshape \hfill Repo: \bitbucket}
+\vspace{6 pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{msection}{Summary}
+	\itemzz{8.5+ years of software development experience covering full stack Java development, {\bf embedded systems}, distributed storage systems.}
+	\itemzz{ Knowledgeable about internals of Amazon AWS technologies, {\bf Linux} kernel, enterprise filesystems, and {\bf device drivers}. 
+	}
+	\itemzz{Worked as Performance specialist at {\bf Netapp and Oracle} responsible for resolving performance bottlenecks across multiple modules like {\bf Filesystems, RAID, Network Protocols}.}
+	\itemzz{Worked as Device driver developer {\bf (BSP)} and Filesystem developer for embedded Linux platforms for {\bf Qualcomm} and {\bf Tuxera} respectively.}
+	\itemzz{Proven record as a versatile problem solver ({\bf top 5\%} among {\bf Python} programmers at Hackerearth) and a quick learner with strong grasp of CS fundamentals.}
+\end{msection}
+\begin{msection}{Academic Background}
+	\begin{ssection}{Indian Institute Of Technology, Kanpur}{July 2004 - May 2009}
+		\itemz {B.Tech - M.Tech, Computer Science \& Engineering, Specialization: Distributed Systems}
+		\itemz {CGPA BTech: {\bf 3.24/4.0},  MTech.: {\bf 3.52/4.0} }
+	\end{ssection}
+	% Helsinki
+	\begin{ssection}{Research Trainee at Helsinki Institute for Information Technology}{May 2007 - July 2007}
+	\end{ssection}
+\end{msection}
+\begin{msection}{Technical Skills}
+	\iitem {Languages}{Java, C, C++, Python, Bash, ARM assembly}
+	\iitem {Debugging Skills}{GDB, blktrace, ftrace, perf, fio, strace}
+	\iitem {Other}{Kernel programming, S3, DynamoDB, SQS, Springboot, Guice}
+	\iitem {Tools}{Docker, QEMU, Yocto/Bitbake, Autoconf}
+\end{msection}
+\begin{msection}{Professional Experience}
+	\begin{ssection}{Software Developer, Amazon Lockers Team, Amazon}{May 2016 - Present}
+		\iitem{Group}{Amazon Lockers}
+	\end{ssection}
+	\begin{ssection}{Software Developer, Filesystem Engg. at Tuxera Inc., Finland}{Apr. 2014 - Mar. 2016}
+		\iitem{Group}{Filesystems R\&D}
+	\end{ssection}
+
+	\begin{ssection}{Senior SW Engg., Filesystem Engg. at Oracle India Pvt. Ltd., Pune}{Jul. 2013 - Apr. 2014}
+		\iitem{Group}{Filesystem Development}
+	\end{ssection}
+
+	\begin{ssection}{MTS, Performance Analysis at Netapp India Pvt. Ltd., Bangalore}{Nov. 2010 - June 2013}
+		\iitem{Group}{Performance Engg.}
+	\end{ssection}
+
+	% ORacle
+	\begin{ssection}{Engineer, CoreBSP team at Qualcomm India, Hyderabad}{July 2009 - Nov. 2010}
+		\iitem{Group}{Linux/Android CoreBSP team}
+	\end{ssection}
+\end{msection}
+
+\pagebreak
+\begin{msection}{Representative Work}
+    %Amazon
+    \begin{ssection}{SDE-2 at Amazon, India}{May. 2016 - Present}
+	\small
+	\itemz {Developed system to upgrade OS over the air.}
+	\itemz {Worked on accessibility initiatives for Amazon lockers. Developed solutions to assist mobility and vision impaired customers.}
+	\end{ssection}
+    %Tuxera
+    \begin{ssection}{Software Developer at Tuxera Inc, Finland}{Apr. 2014 - Mar. 2016}
+	\small
+	\itemz {Laid ground work for a new product Tuxera flash friendly filesystem.}
+    \itemz {Improved filesystem's block allocator by making it non-serialized resulting in significant performance gains.} \itemz {Implemented logic to align writeback to flash boundaries which improved performance of concurrent writes by over 150\%.}	
+    \itemz {Designed automated framework for evaluating filesystem's lifetime on flash memories by defining characteristic workloads and comparing wear statistics dumped from flash device. Results led to subsequent optimization ideas.}
+    \end{ssection}
+    %Oracle
+    \begin{ssection}{Senior Software Engineer at Oracle India, Pune}{July 2013 - Apr. 2014}
+		\small
+		\itemz {Involved in early stage development of a modern highly scalable filesystem based on software transactional memory based concurrency control.}
+		\itemz {Worked on improving readahead detection and identifying key statistics to aid performance debugging and add them to the collection framework.}
+	\end{ssection}
+	% Netapp
+    	\begin{ssection}{Engineer at Netapp India, Bangalore}{Nov. 2010 - Jun. 2013}
+		\small
+		\itemz {Engineering specialist for performance analysis of modules like Filesystem, RAID, storage within ONTAP operating system.}
+		\itemz {Part of 2 member team responsible for performance characterization of file cloning feature of WAFL.}
+		\itemz {My responsibilities included studying test scenarios, analysis of bottlenecks (cpu cost, queueing, suspensions, response times and throughput etc.), impact of parameters and client interaction, suggesting improvements to future design.}
+	\end{ssection}
+
+ %QCOM
+	\begin{ssection}{Device Driver Engineer at Qualcomm India}{July 2009 - Nov. 2010}
+		\small
+		\itemz {Managed the serial and bluetooth host driver subsytem for several SoC targets.}
+		\itemz {Was involved in transitioning code to ARMv7 based multicore targets.}
+		\itemz {Identified inconsistencies and made crucial fixes targeting newer multi-core ARMv7 processors which introduced new features like speculative readahead, weak memory consistency, lock contention and mutual exclusion.}
+	\end{ssection}
+\end{msection}
+
+\begin{msection}{Master's Thesis}
+	\begin{ssection}{Optimised Load Balancing for Satellite Data Processing} {May 2008 - May 2009}
+		\iitem{Advisor}{Prof. Phalguni Gupta, Dept. Of CSE, IIT Kanpur}
+		\small
+		\itemz {Work done in collaboration with Space Application Centre, ISRO}
+		\itemz {Workload at ISRO consists of a DAG of independent jobs that handle a large amount of data and are compute intensive.}
+		\itemz {Developed a system to transparently distribute jobs to the available computing resources while taking care of requirements of input data.}
+		\itemz {Key optimization was overlapping of file transfer time and computation time.}
+        \itemz {Modifications allowed us to achieve 1.5-2 times better performance than existing solutions over a usual grid deployment.}
+	\end{ssection}
+\end{msection}
+
+\begin{msection}{Achievements/Other Activities}
+		\small
+        \itemz {{\bf All India Rank 312} among 180,000+ students in the IIT JEE, the exam for admission to the IITs.}
+        \itemz {Secured all India Rank 230 among about 300,000+ candidates in the AIEEE.}
+        \itemz {1st prize, Electronics competition Leviathon at IIT Kanpur.}
+\end{msection}
+\end{document}
+ 
