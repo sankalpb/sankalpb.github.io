@@ -5,8 +5,8 @@
     <description>Uncategorized log of my personal notes.</description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Mar 2019 22:07:27 +0530</pubDate>
-    <lastBuildDate>Wed, 13 Mar 2019 22:07:27 +0530</lastBuildDate>
+    <pubDate>Sun, 17 Mar 2019 14:04:13 +0530</pubDate>
+    <lastBuildDate>Sun, 17 Mar 2019 14:04:13 +0530</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -27,7 +27,7 @@
 &lt;h1 id=&quot;linux-oom-killer-policy-and-knobs&quot;&gt;Linux OOM killer policy and knobs&lt;a id=&quot;sec-1&quot; name=&quot;sec-1&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;/proc/&amp;lt;pid&amp;gt;/oom_adj -  The possible values of oom&lt;sub&gt;adj&lt;/sub&gt; rangae from -17 to +15. The higher the score, more likely the associated process is to be killed by OOM-killer. If oom_adj is set to -17, the process is not considered for OOM-killing.&lt;/li&gt;
+  &lt;li&gt;/proc/&amp;lt;pid&amp;gt;/oom_adj -  The possible values of oom_adj rangae from -17 to +15. The higher the score, more likely the associated process is to be killed by OOM-killer. If oom_adj is set to -17, the process is not considered for OOM-killing.&lt;/li&gt;
   &lt;li&gt;/proc/&amp;lt;pid&amp;gt;/oom_score - badness score. The more memory the process uses, the higher the score. The longer a process is alive in the system, the smaller the score. Half of each child’s memory size is added to the parent’s score if they do not share the same memory. Thus forking servers are the prime candidates to be killed.&lt;/li&gt;
   &lt;li&gt;If the task has nice value above zero, its score doubles.&lt;/li&gt;
   &lt;li&gt;Superuser or direct hardware access tasks (CAP_SYS_ADMIN, CAP_SYS_RESOURCE or CAP_SYS_RAWIO) have their score divided by 4. This is cumulative, i.e., a super-user task with hardware access would have its score divided by 16.&lt;/li&gt;
