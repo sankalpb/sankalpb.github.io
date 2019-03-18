@@ -25,6 +25,13 @@ layout: null
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
       </item>
-    {% endfor %}
+      {% endfor %}
+      {% for url in site.urls %}
+      <item>
+        <title>{{url.text| xml_escape }}</title>
+        <link>{{url.url| prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{url.url | prepend: site.baseurl | prepend: site.url }}</guid>
+      </item>
+      {%endfor %}
   </channel>
 </rss>
