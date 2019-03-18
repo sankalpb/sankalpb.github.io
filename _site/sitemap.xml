@@ -5,8 +5,8 @@
     <description>Uncategorized log of my personal notes.</description>
     <link>http://localhost:4001/</link>
     <atom:link href="http://localhost:4001/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Mar 2019 14:11:48 +0530</pubDate>
-    <lastBuildDate>Sun, 17 Mar 2019 14:11:48 +0530</lastBuildDate>
+    <pubDate>Mon, 18 Mar 2019 22:14:56 +0530</pubDate>
+    <lastBuildDate>Mon, 18 Mar 2019 22:14:56 +0530</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -47,7 +47,7 @@
         <category>linux</category>
         
       </item>
-    
+      
       <item>
         <title>Unicode condensed</title>
         <description>&lt;div id=&quot;table-of-contents&quot;&gt;
@@ -204,6 +204,25 @@
         <category>general</category>
         
       </item>
-    
+      
+      
+      <item>
+        <title>About Me</title>
+        <link>http://localhost:4001/about/</link>
+        <guid isPermaLink="true">http://localhost:4001/about/</guid>
+      </item>
+      
+      <item>
+        <title>Resume</title>
+        <link>http://localhost:4001/resume/</link>
+        <guid isPermaLink="true">http://localhost:4001/resume/</guid>
+      </item>
+      
+      <item>
+        <title>XML Feed</title>
+        <link>http://localhost:4001/feed.xml</link>
+        <guid isPermaLink="true">http://localhost:4001/feed.xml</guid>
+      </item>
+      
   </channel>
 </rss>
