@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Linux OOM Killer Policy and Knobs
 category: [linux]
 ---
