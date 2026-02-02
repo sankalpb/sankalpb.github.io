@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sankalp-ahi.pages.dev/sitemap.xml
