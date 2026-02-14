@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Versatile programmer with experience spanning Linux kernel, Java WebServices, Embedded Systems and Performance Engg.
+Hands-on Engineering Manager/Tech Lead driving technical excellence and fostering high-performing teams with experience spanning Linux kernel, Cloud PaaS, Java WebServices, Agentic AI and Performance Engg.
 
 email: bose.sankalp[at]gmail.com
